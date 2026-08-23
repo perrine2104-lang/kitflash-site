@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Boutique — KITFLASH</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="marquee-bar">
+  <div class="marquee-track">
+    <span>🔥 LIVRAISON OFFERTE DÈS 50€ D'ACHAT</span>
+    <span>⚡ CODE FLASH15 = -15% SUR TOUT LE SITE</span>
+    <span>🆕 NOUVELLE COLLECTION RÉTRO DISPONIBLE</span>
+    <span>🔥 LIVRAISON OFFERTE DÈS 50€ D'ACHAT</span>
+    <span>⚡ CODE FLASH15 = -15% SUR TOUT LE SITE</span>
+  </div>
+</div>
+
+<header class="main-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">KIT<span>FLASH</span></a>
+    <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="boutique.html" class="active">Boutique</a></li>
+        <li><a href="boutique.html">Nouveautés</a></li>
+        <li><a href="boutique.html">Rétro</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <a href="boutique.html" class="icon-btn" aria-label="Recherche">🔍</a>
+      <a href="panier.html" class="icon-btn" aria-label="Panier">🛒<span class="cart-count">0</span></a>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <div class="breadcrumb"><a href="index.html">Accueil</a> / Boutique</div>
+</div>
+
+<section class="section" style="padding-top:0;">
+  <div class="container">
+    <h2 class="section-title">Toute la <span class="gradient-text">boutique</span></h2>
+    <p class="section-sub">32 maillots disponibles — nouveautés, rétro et éditions limitées.</p>
+
+    <div class="shop-layout">
+      <aside class="filters">
+        <h3>Filtrer par ligue</h3>
+        <div class="filter-group">
+          <label><input type="checkbox" data-filter-league value="Ligue 1"> Ligue 1</label>
+          <label><input type="checkbox" data-filter-league value="Premier League"> Premier League</label>
+          <label><input type="checkbox" data-filter-league value="Liga"> Liga</label>
+          <label><input type="checkbox" data-filter-league value="Serie A"> Serie A</label>
+          <label><input type="checkbox" data-filter-league value="Bundesliga"> Bundesliga</label>
+          <label><input type="checkbox" data-filter-league value="Rétro"> Rétro</label>
+        </div>
+        <h3>Taille</h3>
+        <div class="filter-group">
+          <label><input type="checkbox"> S</label>
+          <label><input type="checkbox"> M</label>
+          <label><input type="checkbox"> L</label>
+          <label><input type="checkbox"> XL</label>
+        </div>
+        <h3>Prix</h3>
+        <div class="filter-group">
+          <label><input type="checkbox"> Moins de 50 €</label>
+          <label><input type="checkbox"> 50 € — 70 €</label>
+          <label><input type="checkbox"> Plus de 70 €</label>
+        </div>
+      </aside>
+
+      <div>
+        <div class="shop-toolbar">
+          <input type="text" data-shop-search placeholder="Rechercher un maillot..." style="background:var(--bg-card);border:1px solid var(--gray-dark);color:var(--white);padding:12px 16px;border-radius:8px;min-width:240px;">
+          <select data-sort>
+            <option value="default">Trier par : Pertinence</option>
+            <option value="price-asc">Prix croissant</option>
+            <option value="price-desc">Prix décroissant</option>
+          </select>
+        </div>
+
+        <div class="product-grid" data-shop-grid>
+
+          <div class="product-card" data-league="Ligue 1" data-name="PSG Domicile 26/27" data-price="59.99">
+            <div class="product-thumb">
+              <span class="badge sale">-20%</span>
+              <button class="wishlist-btn">♡</button>
+              <a href="produit.html"><img src="https://placehold.co/400x500/16162b/ff2fd6?text=PSG+DOMICILE" alt="PSG Domicile"></a>
+            </div>
+            <div class="product-info">
+              <span class="product-league">Ligue 1</span>
+              <a href="produit.html" class="product-name">PSG Domicile 26/27</a>
+              <div class="product-price"><span class="price-now">59,99 €</span><span class="price-old">74,99 €</span></div>
+              <button class="add-cart-btn" data-id="psg-dom" data-name="PSG Domicile 26/27" data-price="59.99" data-league="Ligue 1" data-img="https://placehold.co/400x500/16162b/ff2fd6?text=PSG+DOMICILE">Ajouter au panier</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-league="Ligue 1" data-name="OM Domicile 26/27" data-price="54.99">
+            <div class="product-thumb">
+              <button class="wishlist-btn">♡</button>
+              <a href="produit.html"><img src="https://placehold.co/400x500/16162b/00e5ff?text=OM+DOMICILE" alt="OM Domicile"></a>
+            </div>
+            <div class="product-info">
+              <span class="product-league">Ligue 1</span>
+              <a href="produit.html" class="product-name">OM Domicile 26/27</a>
+              <div class="product-price"><span class="price-now">54,99 €</span></div>
+              <button class="add-cart-btn" data-id="om-dom" data-name="OM Domicile 26/27" data-price="54.99" data-league="Ligue 1" data-img="https://placehold.co/400x500/16162b/00e5ff?text=OM+DOMICILE">Ajouter au panier</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-league="Premier League" data-name="Manchester City Extérieur" data-price="55.99">
+            <div class="product-thumb">
+              <span class="badge sale">-15%</span>
+              <button class="wishlist-btn">♡</button>
+              <a href="produit.html"><img src="https://placehold.co/400x500/16162b/f9ff2f?text=MAN+CITY" alt="Manchester City"></a>
+            </div>
+            <div class="product-info">
+              <span class="product-league">Premier League</span>
+              <a href="produit.html" class="product-name">Manchester City Extérieur</a>
+              <div class="product-price"><span class="price-now">55,99 €</span><span class="price-old">65,99 €</span></div>
+              <button class="add-cart-btn" data-id="mci-ext" data-name="Manchester City Extérieur" data-price="55.99" data-league="Premier League" data-img="https://placehold.co/400x500/16162b/f9ff2f?text=MAN+CITY">Ajouter au panier</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-league="Premier League" data-name="Liverpool Domicile" data-price="62.99">
+            <div class="product-thumb">
+              <span class="badge new">Nouveau</span>
+              <button class="wishlist-btn">♡</button>
+              <a href="produit.html"><img src="https://placehold.co/400x500/16162b/39ff14?text=LIVERPOOL" alt="Liverpool"></a>
+            </div>
+            <div class="product-info">
+              <span class="product-league">Premier League</span>
+              <a href="produit.html" class="product-name">Liverpool Domicile</a>
+              <div class="product-price"><span class="price-now">62,99 €</span></div>
+              <button class="add-cart-btn" data-id="liv-dom" data-name="Liverpool Domicile" data-price="62.99" data-league="Premier League" data-img="https://placehold.co/400x500/16162b/39ff14?text=LIVERPOOL">Ajouter au panier</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-league="Liga" data-name="Real Madrid Domicile" data-price="64.99">
+            <div class="product-thumb">
+              <span class="badge new">Nouveau</span>
+              <button class="wishlist-btn">♡</button>
+              <a href="produit.html"><img src="https://placehold.co/400x500/16162b/00e5ff?text=REAL+MADRID" alt="Real Madrid"></a>
+            </div>
+            <div class="product-info">
+              <span class="product-league">Liga</span>
+              <a href="produit.html" class="product-name">Real Madrid Domicile</a>
+              <div class="product-price"><span class="price-now">64,99 €</span></div>
+              <button class="add-cart-btn" data-id="rma-dom" data-name="Real Madrid Domicile" data-price="64.99" data-league="Liga" data-img="https://placehold.co/400x500/16162b/00e5ff?text=REAL+MADRID">Ajouter au panier</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-league="Liga" data-name="FC Barcelone Domicile" data-price="63.99">
+            <div class="product-thumb">
+              <span class="badge sale">-10%</span>
+              <button class="wishlist-btn">♡</button>
+              <a href="produit.html"><img src="https://placehold.co/400x500/16162b/ff2fd6?text=BARCELONE" alt="FC Barcelone"></a>
+            </div>
+            <div class="product-info">
+              <span class="product-league">Liga</span>
+              <a href="produit.html" class="product-name">FC Barcelone Domicile</a>
+              <div class="product-price"><span class="price-now">63,99 €</span><span class="price-old">70,99 €</span></div>
+              <button class="add-cart-btn" data-id="fcb-dom" data-name="FC Barcelone Domicile" data-price="63.99" data-league="Liga" data-img="https://placehold.co/400x500/16162b/ff2fd6?text=BARCELONE">Ajouter au panier</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-league="Serie A" data-name="Juventus Domicile" data-price="58.99">
+            <div class="product-thumb">
+              <button class="wishlist-btn">♡</button>
+              <a href="produit.html"><img src="https://placehold.co/400x500/16162b/f9ff2f?text=JUVENTUS" alt="Juventus"></a>
+            </div>
+            <div class="product-info">
+              <span class="product-league">Serie A</span>
+              <a href="produit.html" class="product-name">Juventus Domicile</a>
+              <div class="product-price"><span class="price-now">58,99 €</span></div>
+              <button class="add-cart-btn" data-id="juv-dom" data-name="Juventus Domicile" data-price="58.99" data-league="Serie A" data-img="https://placehold.co/400x500/16162b/f9ff2f?text=JUVENTUS">Ajouter au panier</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-league="Bundesliga" data-name="Bayern Munich Domicile" data-price="61.99">
+            <div class="product-thumb">
+              <button class="wishlist-btn">♡</button>
+              <a href="produit.html"><img src="https://placehold.co/400x500/16162b/39ff14?text=BAYERN" alt="Bayern Munich"></a>
+            </div>
+            <div class="product-info">
+              <span class="product-league">Bundesliga</span>
+              <a href="produit.html" class="product-name">Bayern Munich Domicile</a>
+              <div class="product-price"><span class="price-now">61,99 €</span></div>
+              <button class="add-cart-btn" data-id="bay-dom" data-name="Bayern Munich Domicile" data-price="61.99" data-league="Bundesliga" data-img="https://placehold.co/400x500/16162b/39ff14?text=BAYERN">Ajouter au panier</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-league="Rétro" data-name="Brésil Rétro 1998" data-price="49.99">
+            <div class="product-thumb">
+              <span class="badge new">Rétro</span>
+              <button class="wishlist-btn">♡</button>
+              <a href="produit.html"><img src="https://placehold.co/400x500/16162b/39ff14?text=BRESIL+1998" alt="Brésil Rétro 1998"></a>
+            </div>
+            <div class="product-info">
+              <span class="product-league">Rétro</span>
+              <a href="produit.html" class="product-name">Brésil Rétro 1998</a>
+              <div class="product-price"><span class="price-now">49,99 €</span></div>
+              <button class="add-cart-btn" data-id="bre-retro-98" data-name="Brésil Rétro 1998" data-price="49.99" data-league="Rétro" data-img="https://placehold.co/400x500/16162b/39ff14?text=BRESIL+1998">Ajouter au panier</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-league="Rétro" data-name="Italie Rétro 2006" data-price="47.99">
+            <div class="product-thumb">
+              <span class="badge new">Rétro</span>
+              <button class="wishlist-btn">♡</button>
+              <a href="produit.html"><img src="https://placehold.co/400x500/16162b/00e5ff?text=ITALIE+2006" alt="Italie Rétro 2006"></a>
+            </div>
+            <div class="product-info">
+              <span class="product-league">Rétro</span>
+              <a href="produit.html" class="product-name">Italie Rétro 2006</a>
+              <div class="product-price"><span class="price-now">47,99 €</span></div>
+              <button class="add-cart-btn" data-id="ita-retro-06" data-name="Italie Rétro 2006" data-price="47.99" data-league="Rétro" data-img="https://placehold.co/400x500/16162b/00e5ff?text=ITALIE+2006">Ajouter au panier</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-league="Ligue 1" data-name="AS Monaco Domicile" data-price="52.99">
+            <div class="product-thumb">
+              <button class="wishlist-btn">♡</button>
+              <a href="produit.html"><img src="https://placehold.co/400x500/16162b/ff2fd6?text=MONACO" alt="AS Monaco"></a>
+            </div>
+            <div class="product-info">
+              <span class="product-league">Ligue 1</span>
+              <a href="produit.html" class="product-name">AS Monaco Domicile</a>
+              <div class="product-price"><span class="price-now">52,99 €</span></div>
+              <button class="add-cart-btn" data-id="mon-dom" data-name="AS Monaco Domicile" data-price="52.99" data-league="Ligue 1" data-img="https://placehold.co/400x500/16162b/ff2fd6?text=MONACO">Ajouter au panier</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-league="Serie A" data-name="AC Milan Domicile" data-price="59.99">
+            <div class="product-thumb">
+              <span class="badge sale">-12%</span>
+              <button class="wishlist-btn">♡</button>
+              <a href="produit.html"><img src="https://placehold.co/400x500/16162b/f9ff2f?text=AC+MILAN" alt="AC Milan"></a>
+            </div>
+            <div class="product-info">
+              <span class="product-league">Serie A</span>
+              <a href="produit.html" class="product-name">AC Milan Domicile</a>
+              <div class="product-price"><span class="price-now">59,99 €</span><span class="price-old">67,99 €</span></div>
+              <button class="add-cart-btn" data-id="mil-dom" data-name="AC Milan Domicile" data-price="59.99" data-league="Serie A" data-img="https://placehold.co/400x500/16162b/f9ff2f?text=AC+MILAN">Ajouter au panier</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>KITFLASH</h4>
+        <p>La boutique de maillots de football pensée pour les vrais supporters.</p>
+        <div class="social-row">
+          <a href="#" aria-label="Instagram">📷</a>
+          <a href="#" aria-label="TikTok">🎵</a>
+          <a href="#" aria-label="Facebook">📘</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Boutique</h4>
+        <ul><li><a href="boutique.html">Tous les maillots</a></li><li><a href="boutique.html">Nouveautés</a></li><li><a href="boutique.html">Rétro</a></li><li><a href="panier.html">Mon panier</a></li></ul>
+      </div>
+      <div class="footer-col">
+        <h4>Aide</h4>
+        <ul><li><a href="contact.html">Contact</a></li><li><a href="contact.html">FAQ</a></li><li><a href="contact.html">Livraison</a></li><li><a href="contact.html">Retours</a></li></ul>
+      </div>
+      <div class="footer-col">
+        <h4>Paiement</h4>
+        <div class="payment-row"><span>Visa</span><span>Mastercard</span><span>PayPal</span><span>Apple Pay</span></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 KITFLASH. Tous droits réservés.</span>
+      <span>Site vitrine de démonstration — design uniquement</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
