@@ -111,15 +111,28 @@ function initShopFilters(){
   const sortSelect = document.querySelector('[data-sort]');
   const searchInput = document.querySelector('[data-shop-search]');
 
+  // Lit les paramètres d'URL (?league=... et ?tag=...) pour préfiltrer
+  // la boutique quand on arrive depuis un lien "Nouveautés" ou "Rétro".
+  const params = new URLSearchParams(window.location.search);
+  const leagueParam = params.get('league');
+  const tagParam = params.get('tag');
+
+  if(leagueParam){
+    const box = Array.from(leagueBoxes).find(b=> b.value === leagueParam);
+    if(box) box.checked = true;
+  }
+
   function applyFilters(){
     const activeLeagues = Array.from(leagueBoxes).filter(b=>b.checked).map(b=>b.value);
     const query = (searchInput?.value || '').toLowerCase();
     cards.forEach(card=>{
       const league = card.dataset.league;
       const name = card.dataset.name.toLowerCase();
+      const tag = card.dataset.tag || '';
       const matchLeague = activeLeagues.length === 0 || activeLeagues.includes(league);
       const matchSearch = name.includes(query);
-      card.style.display = (matchLeague && matchSearch) ? '' : 'none';
+      const matchTag = !tagParam || tag === tagParam;
+      card.style.display = (matchLeague && matchSearch && matchTag) ? '' : 'none';
     });
   }
 
@@ -137,6 +150,8 @@ function initShopFilters(){
   leagueBoxes.forEach(b=> b.addEventListener('change', applyFilters));
   if(searchInput) searchInput.addEventListener('input', applyFilters);
   if(sortSelect) sortSelect.addEventListener('change', applySort);
+
+  applyFilters();
 }
 
 /* ---------- Page produit : taille + quantité + galerie ---------- */
